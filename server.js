@@ -7,4 +7,4 @@ const server = http.createServer(app);
 
 server.listen(port);
 
-console.log('server started on: ' + port);
+// console.log('server started on: ' + port);
