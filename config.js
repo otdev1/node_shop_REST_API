@@ -1,4 +1,4 @@
-{
+export default {
     MONGODB_URL: process.env.MONGODB_URL || 'mongodb://localhost/node-rest-shop-db'
     //sets the value of Config Vars(heroku) which is accessed by process.env to MONGODB_URL
 
@@ -6,4 +6,4 @@
 
 }
 
-module.exports = config;
+//module.exports = config;
