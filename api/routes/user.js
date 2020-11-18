@@ -30,7 +30,10 @@ router.post("/signup", (req, res, next) => {
     .exec()
     .then(user => { 
       /*prevents a user from being created with an email that already exists
-      node that user is an array*/
+      note that user is an array therefore this variable will never be null
+      so the length i.e number of elements in this array must be checked
+      if the length is greater than or equal to 1 then it isn't empty meaning the current user(email)
+      already exists*/
       if (user.length >= 1) {
         return res.status(409).json({ //status code 409 means conflict
           message: "Mail exists"
