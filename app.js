@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan'); //morgan logs activities calling the next() function
 const bodyParser = require('body-parser');
-//const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 //const config = require('./config');
 
