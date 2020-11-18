@@ -4,7 +4,7 @@ const morgan = require('morgan'); //morgan logs activities calling the next() fu
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-const config = require('config');
+const config = require('./config');
 
 const dotenv = require('dotenv');
 
