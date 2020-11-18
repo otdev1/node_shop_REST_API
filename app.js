@@ -19,12 +19,13 @@ App methodology.*/
 mongoose.Promise = global.Promise;
 //mongoose.connect('mongodb://localhost/node-rest-shop-db', { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true });
 
-//mongoose.connect(mongodbUrl, { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URL, { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true })
+        .catch((error) => console.log(error.reason));
 
-mongoose
-    .connect("mongodb+srv://nrs-admin:"+process.env.MONGODB_PW+"@node-rest-shop-hbzsi.mongodb.net/restapi-db?retryWrites=true", 
-                { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true, })
-    .catch((error) => console.log(error.reason));
+// mongoose
+//     .connect("mongodb+srv://nrs-admin:"+ process.env.MONGODB_PW +"@node-rest-shop-hbzsi.mongodb.net/restapi-db?retryWrites=true", 
+//                 { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true, })
+//     .catch((error) => console.log(error.reason));
 
 /*
     CORS - Cross Origin Resource Sharing enablement
