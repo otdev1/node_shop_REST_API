@@ -4,27 +4,27 @@ const morgan = require('morgan'); //morgan logs activities calling the next() fu
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-//const config = require('./config');
+const config = require('./config');
 
-//const dotenv = require('dotenv');
+const dotenv = require('dotenv');
 
-//dotenv.config();
+dotenv.config();
 /*Dotenv is a zero-dependency module that loads environment 
 variables from a .env file into process.env. Storing configuration 
 in the environment separate from code is based on The Twelve-Factor 
 App methodology.*/
 
-//const mongodbUrl = config.MONGODB_URL;
+const mongodbUrl = config.MONGODB_URL;
 
 mongoose.Promise = global.Promise;
 //mongoose.connect('mongodb://localhost/node-rest-shop-db', { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true });
 
-//mongoose.connect(mongodbUrl, { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect(mongodbUrl, { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true });
 
-mongoose
-    .connect("mongodb+srv://nrs-admin:"+process.env.MONGODB_PW+"@node-rest-shop-hbzsi.mongodb.net/restapi-db?retryWrites=true", 
-                { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true, })
-    .catch((error) => console.log(error.reason));
+// mongoose
+//     .connect("mongodb+srv://nrs-admin:"+process.env.MONGODB_PW+"@node-rest-shop-hbzsi.mongodb.net/restapi-db?retryWrites=true", 
+//                 { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true, })
+//     .catch((error) => console.log(error.reason));
 
 /*
     CORS - Cross Origin Resource Sharing enablement
