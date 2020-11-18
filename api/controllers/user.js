@@ -32,7 +32,7 @@ exports.user_login = (req, res, next) => {
                   {
                       expiresIn: "1h" //jwt key expires in 1 hour
                   }
-                ); /*the sign function accepts payload and secretorprivatekey as arguments and generates 
+                ); /*the sign function accepts a payload and secretorprivatekey as arguments and generates 
                    a token i.e string of characters which can be used for authentication of routes*/
                 return res.status(200).json({
                   message: "Auth successful",
