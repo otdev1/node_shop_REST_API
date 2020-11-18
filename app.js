@@ -21,7 +21,10 @@ mongoose.Promise = global.Promise;
 
 //mongoose.connect(mongodbUrl, { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true });
 
-mongoose.connect("mongodb+srv://nrs-admin:"+process.env.MONGODB_PW+"@node-rest-shop-hbzsi.mongodb.net/restapi-db?retryWrites=true", { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true });
+mongoose
+    .connect("mongodb+srv://nrs-admin:"+process.env.MONGODB_PW+"@node-rest-shop-hbzsi.mongodb.net/restapi-db?retryWrites=true", 
+                { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true, })
+    .catch((error) => console.log(error.reason));
 
 /*
     CORS - Cross Origin Resource Sharing enablement
