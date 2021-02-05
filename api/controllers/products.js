@@ -25,9 +25,10 @@ exports.products_get_all = (req, res, next) => {
             price: doc.price,
             _id: doc._id,
             request: {
+	      url: "https://ot-node-rest-api.herokuapp.com/products/" + doc._id,
               type: "GET",
               description: "Get more details about this product",
-              url: "http://localhost:3000/products/" + doc._id
+              
             }
             };
           })
@@ -126,9 +127,9 @@ exports.products_create_product = (req, res, next) => {
           name: result.name,
           _id: result._id,
           request: { //specifies which URL and HTTP verb to use to get details about the newly created product
-              type: 'GET',
+              url: "https://ot-node-rest-api.herokuapp.com/products/" + result._id,
+	      type: 'GET',
               description: "Get more details about this product",
-              url: "http://localhost:3000/products/" + result._id
           }
         }
       });
@@ -158,9 +159,9 @@ exports.products_get_product = (req, res, next) => {
         res.status(200).json({
           product: doc,
           request: {
-              type: 'GET',
-              description: 'Get all products',
-              url: 'http://localhost:3000/products'
+              url: 'https://ot-node-rest-api.herokuapp.com/products',
+	      type: 'GET',
+              description: 'Get all products'
           }
         });
       } else {
@@ -199,8 +200,8 @@ exports.products_update_product = (req, res, next) => {
       res.status(200).json({
         message: 'Product updated',
         request: {
-            type: 'GET',
-            url: 'http://localhost:3000/products/' + id
+            url: 'https://ot-node-rest-api.herokuapp.com/products/' + id,
+	    type: 'GET'
         }
       });
     })
@@ -221,10 +222,10 @@ exports.products_delete = (req, res, next) => {
       res.status(200).json({
         message: 'Product deleted',
         request: {
+	    url: 'https://ot-node-rest-api.herokuapp.com/products',
+	    body: { name: 'String', price: 'Number' },
             type: 'POST',
             description: 'Create a new product',
-            url: 'http://localhost:3000/products',
-            body: { name: 'String', price: 'Number' }
         }
       });
     })
