@@ -7,7 +7,7 @@ const productSchema = mongoose.Schema({
     //price: Number
     price: { type: Number, required: true}, //prevents a product that doesn't have a value for the price property from being created
     
-    productImage: { type: String, required: true} 
+    productImage: { type: String, required: false} 
     //type: String is used because the image/file URL will be stored in the database
     /*required: true means that the form must include an image in order to be submitted
     this behaviour is can obtional*/
