@@ -31,8 +31,10 @@ exports.orders_get_all = (req, res, next) => {
                     product: doc.product,
                     quantity: doc.quantity,
                     request: {
+                      url: "https://ot-node-rest-api.herokuapp.com/orders/" + doc._id,
                       type: "GET",
-                      url: "http://localhost:3000/orders/" + doc._id
+                      description: "Get more details about this order"
+                      
                     }
                   };
                 })
@@ -113,8 +115,9 @@ exports.orders_create_order = (req, res, next) => {
                 quantity: result.quantity
             },
             request: {
+                url: "https://ot-node-rest-api.herokuapp.com/orders/" + result._id,
                 type: "GET",
-                url: "http://localhost:3000/orders/" + result._id
+                description: "Get more details about this order"
             }
         });
     })
@@ -145,8 +148,10 @@ exports.orders_get_order = (req, res, next) => {
         res.status(200).json({
             order: order,
             request: {
-              type: "GET",
-              url: "http://localhost:3000/orders"
+               url: "https://ot-node-rest-api.herokuapp.com/orders",
+               type: "GET",
+               "description": "Get all orders"
+                
             }
         });
       })
@@ -205,8 +210,8 @@ exports.orders_delete_order = (req, res, next) => {
                     res.status(200).json({
                     message: "Order deleted",
                     request: {
+                        url: "https://ot-node-rest-api.herokuapp.com/orders",
                         type: "POST",
-                        url: "http://localhost:3000/orders",
                         body: { productId: "ID", quantity: "Number" }
                     }
                 });
