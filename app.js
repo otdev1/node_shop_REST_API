@@ -21,6 +21,7 @@ mongoose.Promise = global.Promise;
 
 mongoose.connect(process.env.MONGODB_URL, { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true })
         .catch((error) => console.log(error.reason));
+//process.env.MONGODB_URL accesses the MONGODB_URL config variable on the ot-node-rest-api heroku server
 
 // mongoose
 //     .connect("mongodb+srv://nrs-admin:"+ process.env.MONGODB_PW +"@node-rest-shop-hbzsi.mongodb.net/restapi-db?retryWrites=true", 

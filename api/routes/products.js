@@ -2,66 +2,12 @@
 const express = require('express');
 const router = express.Router(); //see https://stackoverflow.com/questions/28305120/differences-between-express-router-and-app-get
 const mongoose = require('mongoose');
-const multer = require('multer'); 
+//const multer = require('multer'); 
 /*multer package is used parses form body data, image/file will be sent as form data instead
 of raw JSON data*/
 
 const checkAuth = require('../middleware/check-auth');
 const ProductsController = require('../controllers/products');
-
-const storage = multer.diskStorage({ //specifies how files should be stored see https://github.com/expressjs/multer 
-  destination: function(req, file, cb) { //cb is a built-in multer call back function
-    cb(null, './uploads/');
-  },
-  filename: function(req, file, cb) {
-    // cb(null, new Date().toISOString() + file.originalname); toISOString() usage produces an error
-    cb(null, Date.now() + file.originalname); 
-    /*altenately file.fieldname can also be used since fieldname is property of the file object
-    e.g{
-      fieldname: 'productImage',
-      originalname: 'action-asphalt-automobile-627678.jpg',
-      encoding: '7bit',
-      mimetype: 'image/jpeg',
-      destination: './uploads/',
-      filename: '1588862807973action-asphalt-automobile-627678.jpg',
-      path: 'uploads\\1588862807973action-asphalt-automobile-627678.jpg',
-      size: 414855
-    }*/
-  }
-});
-
-//const upload = multer({dest: 'uploads/'}); //  uploads/ is relative path but /uploads/ is an absolute path
-/*specifies destination where multer  stores incoming files*/
-
-const fileFilter = (req, file, cb) => { //arrow function equivalent of function (req, file, cb)
-
-  if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
-    cb(null, true);
-  } else {
-    cb(null, false); 
-    /*this only prevents the file from being stored it does not generate a notification of rejection
-    code resembling cb(new Error('message'), true) would have to be used to enable this behaviour*/
-                   
-  }
-
-  //cb(null, false); //reject a file, file will not be stored
-  //cb(null, true); //accept a file to store it
-
-  //if null is not set an error will be returned
-
-};
-
-const upload = multer({
-  storage: storage, 
-  limits: {
-    filesize: 1024 * 1024 * 5
-  },
-  fileFilter: fileFilter
-}); 
-/*the storage constant which holds the storage strategy i.e destination and filename properties is set to the storage property
-o the configuration object object {} being passed to multer*/
-
-//const Product = require('../models/productModel');
 
 router.get("/", ProductsController.products_get_all);
 
