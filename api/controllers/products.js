@@ -23,7 +23,6 @@ exports.products_get_all = (req, res, next) => {
           return {
             name: doc.name,
             price: doc.price,
-            productImage: doc.productImage,
             _id: doc._id,
             request: {
               type: "GET",
@@ -149,7 +148,7 @@ exports.products_get_product = (req, res, next) => {
         https://mongoosejs.com/docs/queries.html
   */
   Product.findById(id)
-    .select('name price _id productImage') 
+    .select('name price _id') 
     .exec()
     .then(doc => {
       console.log("From database", doc);
