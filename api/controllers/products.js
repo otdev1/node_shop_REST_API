@@ -12,7 +12,7 @@ const Product = require('../models/productModel');
 //returns all products being stored in the database as an array
 exports.products_get_all = (req, res, next) => {
     Product.find()
-    .select("name price _id productImage") //specifies which fields i.e properties GET should retrieve
+    .select("name price _id") //specifies which fields i.e properties GET should retrieve
     .exec() //used to get a real promise see https://stackoverflow.com/questions/31549857/mongoose-what-does-the-exec-function-do
     .then(docs => {
       console.log(docs);
@@ -112,10 +112,7 @@ exports.products_create_product = (req, res, next) => {
   const product = new Product({
     _id: new mongoose.Types.ObjectId(), //generate and assign an id value to the _id key
     name: req.body.name, //assigns the name property of the body property of the request object to name property of the Product object
-    price: req.body.price, //assigns the price property of the body property of the request object to price property of the Product object
-    productImage: req.file.path 
-    /*set the URL i.e the value of the path property of file object to productImage see definition 
-    of const storage configuration object on line 8*/
+    price: req.body.price, //assigns the price property of the body property of the request object to price property of the Product object 
   });
   product
     .save()
