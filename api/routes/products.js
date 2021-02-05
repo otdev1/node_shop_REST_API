@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router(); //see https://stackoverflow.com/questions/28305120/differences-between-express-router-and-app-get
 const mongoose = require('mongoose');
-const multer = require('multer'); 
+//const multer = require('multer'); 
 /*multer package is used parses form body data, image/file will be sent as form data instead
 of raw JSON data*/
 
