@@ -111,8 +111,7 @@ exports.products_create_product = (req, res, next) => {
   const product = new Product({
     _id: new mongoose.Types.ObjectId(), //generate and assign an id value to the _id key
     name: req.body.name, //assigns the name property of the body property of the request object to name property of the Product object
-    price: req.body.price, //assigns the price property of the body property of the request object to price property of the Product object
-    productImage: req.file.path 
+    price: req.body.price //assigns the price property of the body property of the request object to price property of the Product object 
     /*set the URL i.e the value of the path property of file object to productImage see definition 
     of const storage configuration object on line 8*/
   });
@@ -125,7 +124,6 @@ exports.products_create_product = (req, res, next) => {
         // createdProduct: result
         createdProduct: {
           name: result.name,
-          price: result.price,
           _id: result._id,
           request: { //specifies which URL and HTTP verb to use to get details about the newly created product
               type: 'GET',
@@ -151,7 +149,7 @@ exports.products_get_product = (req, res, next) => {
         https://mongoosejs.com/docs/queries.html
   */
   Product.findById(id)
-    .select('name price _id productImage') 
+    .select('name price _id') 
     .exec()
     .then(doc => {
       console.log("From database", doc);
