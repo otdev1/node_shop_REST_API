@@ -21,6 +21,7 @@ Success response data:
     "message": "User created"
 }
 
+##
 
 LOG IN
 
