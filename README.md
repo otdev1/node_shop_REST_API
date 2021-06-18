@@ -43,6 +43,7 @@ Success response data:
     "token": 211-character JSON web token
 }
 
+##
 
 RETRIEVE ALL PRODUCTS
 
@@ -70,6 +71,7 @@ Success response data:
     ]
 }
 
+##
 
 RETRIEVE DATA FOR A SPECIFIC PRODUCT
 
@@ -94,6 +96,7 @@ Success response data:
     }
 }
 
+##
 
 CREATE A PRODUCT
 
@@ -125,6 +128,7 @@ Success response data:
     }
 }
 
+##
 
 UPDATE A PRODUCT
 
@@ -151,6 +155,7 @@ Success response data:
     }
 }
 
+##
 
 DELETE A PRODUCT
 
@@ -177,6 +182,7 @@ Success response data:
     }
 }
 
+##
 
 RETRIEVE ALL ORDERS
 
@@ -209,6 +215,7 @@ Success response data:
     ]
 }
 
+##
 
 RETRIEVE A SPECIFIC ORDER
 
@@ -241,6 +248,7 @@ Success response data:
     }
 }
 
+##
 
 CREATE AN ORDER
 
@@ -273,6 +281,7 @@ Success response data:
     }
 }
 
+##
 
 DELETE AN ORDER
 
@@ -298,6 +307,6 @@ Success response data:
     }
 }
 
-
+##
 
 
