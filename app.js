@@ -4,9 +4,11 @@ const morgan = require('morgan'); //morgan logs activities calling the next() fu
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-mongoose.Promise = global.Promise;
-mongoose.connect("mongodb+srv://nrs-admin:" + process.env.MONGO_ATLAS_PW + "node-rest-shop-hbzsi.mongodb.net/test?retryWrites=true&w=majority", { useMongoClient: true, useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true });
+require('dotenv').config()
 
+mongoose.Promise = global.Promise;
+//mongoose.connect("mongodb+srv://nrs-admin:" + process.env.MONGO_ATLAS_PW + "node-rest-shop-hbzsi.mongodb.net/test?retryWrites=true&w=majority", { useMongoClient: true, useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URL, { useMongoClient: true, useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true });
 /*
     CORS - Cross Origin Resource Sharing enablement
 */
