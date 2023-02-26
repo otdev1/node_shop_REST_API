@@ -6,7 +6,7 @@ SIGN UP AS NEW USER
 
 HTTP request type: POST
 
-Request URL: https://ot-node-rest-api.herokuapp.com/user/signup
+Request URL: https://ot-node-rest-api.onrender.com/user/signup
 
 Request data format:
 
@@ -27,7 +27,7 @@ LOG IN
 
 HTTP request type: POST
 
-Request URL: https://ot-node-rest-api.herokuapp.com/user/login
+Request URL: https://ot-node-rest-api.onrender.com/user/login
 
 Request data format:
 
@@ -49,7 +49,7 @@ RETRIEVE ALL PRODUCTS
 
 HTTP request type: GET
 
-Request URL: https://ot-node-rest-api.herokuapp.com/products
+Request URL: https://ot-node-rest-api.onrender.com/products
 
 Request data format: none
 
@@ -77,7 +77,7 @@ RETRIEVE DATA FOR A SPECIFIC PRODUCT
 
 HTTP request type: GET
 
-Request URL: https://ot-node-rest-api.herokuapp.com/products/productid
+Request URL: https://ot-node-rest-api.onrender.com/products/productid
 
 Request data format: none
 
@@ -104,7 +104,7 @@ HTTP request type: POST
 
 Authorization header parameter value: Bearer 211-character JSON web token
 
-Request URL: https://ot-node-rest-api.herokuapp.com/products
+Request URL: https://ot-node-rest-api.onrender.com/products
 
 Request data format: 
 
@@ -136,7 +136,7 @@ HTTP request type: PATCH
 
 Authorization header parameter value: Bearer 211-character JSON web token 
 
-Request URL: https://ot-node-rest-api.herokuapp.com/products/productid
+Request URL: https://ot-node-rest-api.onrender.com/products/productid
 
 Request data format: 
 
@@ -163,7 +163,7 @@ HTTP request type: DELETE
 
 Authorization header parameter value: Bearer 211-character JSON web token 
 
-Request URL: https://ot-node-rest-api.herokuapp.com/products/productid
+Request URL: https://ot-node-rest-api.onrender.com/products/productid
 
 Request data format: none
 
@@ -190,7 +190,7 @@ HTTP request type: GET
 
 Authorization header parameter value: Bearer 211-character JSON web token
 
-Request URL: https://ot-node-rest-api.herokuapp.com/orders
+Request URL: https://ot-node-rest-api.onrender.com/orders
 
 Request data format: none
 
@@ -223,7 +223,7 @@ HTTP request type: GET
 
 Authorization header parameter value: Bearer 211-character JSON web token
 
-Request URL: https://ot-node-rest-api.herokuapp.com/orders/orderid
+Request URL: https://ot-node-rest-api.onrender.com/orders/orderid
 
 Request data format: none
 
@@ -256,7 +256,7 @@ HTTP request type: POST
 
 Authorization header parameter value: Bearer 211-character JSON web token
 
-Request URL: https://ot-node-rest-api.herokuapp.com/orders
+Request URL: https://ot-node-rest-api.onrender.com/orders
 
 Request data format: 
 
@@ -289,7 +289,7 @@ HTTP request type: POST
 
 Authorization header parameter value: Bearer 211-character JSON web token
 
-Request URL: https://ot-node-rest-api.herokuapp.com/orders/orderid
+Request URL: https://ot-node-rest-api.onrender.com/orders/orderid
 
 Request data format: none
 
