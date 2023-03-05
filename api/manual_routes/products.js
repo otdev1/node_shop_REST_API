@@ -87,7 +87,7 @@ router.get("/", (req, res, next) => {
             request: {
               type: "GET",
               description: "Get more details about this product",
-              url: "http://localhost:3000/products/" + doc._id
+              url: "https://ot-node-rest-api.onrender.com/products/" + doc._id
             }
             };
           })
@@ -190,7 +190,7 @@ router.post("/", checkAuth, upload.single('productImage'), (req, res, next) => {
           request: { //specifies which URL and HTTP verb to use to get details about the newly created product
               type: 'GET',
               description: "Get more details about this product",
-              url: "http://localhost:3000/products/" + result._id
+              url: "https://ot-node-rest-api.onrender.com/products/" + result._id
           }
         }
       });
@@ -236,7 +236,7 @@ router.get("/:productId", (req, res, next) => {
             request: {
                 type: 'GET',
                 description: 'Get all products',
-                url: 'http://localhost:3000/products'
+                url: 'https://ot-node-rest-api.onrender.com/products'
             }
           });
         } else {
@@ -282,7 +282,7 @@ router.patch("/:productId", checkAuth, (req, res, next) => {
         message: 'Product updated',
         request: {
             type: 'GET',
-            url: 'http://localhost:3000/products/' + id
+            url: 'https://ot-node-rest-api.onrender.com/products/' + id
         }
       });
     })
@@ -311,7 +311,7 @@ router.delete("/:productId", checkAuth, (req, res, next) => {
         request: {
             type: 'POST',
             description: 'Create a new product',
-            url: 'http://localhost:3000/products',
+            url: 'https://ot-node-rest-api.onrender.com/products',
             body: { name: 'String', price: 'Number' }
         }
       });
