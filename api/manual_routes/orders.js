@@ -36,7 +36,7 @@ router.get('/', checkAuth, (req, res, next) => {
                     quantity: doc.quantity,
                     request: {
                       type: "GET",
-                      url: "http://localhost:3000/orders/" + doc._id
+                      url: "https://ot-node-rest-api.onrender.com/orders/" + doc._id
                     }
                   };
                 })
@@ -119,7 +119,7 @@ router.post('/', checkAuth, (req, res, next) => {
             },
             request: {
                 type: "GET",
-                url: "http://localhost:3000/orders/" + result._id
+                url: "https://ot-node-rest-api.onrender.com/orders/" + result._id
             }
         });
     })
@@ -152,7 +152,7 @@ router.get("/:orderId", checkAuth, (req, res, next) => {
             order: order,
             request: {
               type: "GET",
-              url: "http://localhost:3000/orders"
+              url: "https://ot-node-rest-api.onrender.com/orders"
             }
         });
       })
@@ -201,7 +201,7 @@ router.get("/:orderId", checkAuth, (req, res, next) => {
               message: "Order not found",
               request: {
                 type: "GET",
-                url: "http://localhost:3000/orders"
+                url: "https://ot-node-rest-api.onrender.com/orders"
               }
            });
         }
@@ -212,7 +212,7 @@ router.get("/:orderId", checkAuth, (req, res, next) => {
                     message: "Order deleted",
                     request: {
                         type: "POST",
-                        url: "http://localhost:3000/orders",
+                        url: "https://ot-node-rest-api.onrender.com/orders",
                         body: { productId: "ID", quantity: "Number" }
                     }
                 });
