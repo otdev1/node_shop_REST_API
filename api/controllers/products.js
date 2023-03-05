@@ -27,7 +27,7 @@ exports.products_get_all = (req, res, next) => {
             request: {
               type: "GET",
               description: "Get more details about this product",
-              url:" https://ot-node-rest-api.onrender.com/products/" + doc._id
+              url:"https://ot-node-rest-api.onrender.com/products/" + doc._id
             }
             };
           })
@@ -127,7 +127,7 @@ exports.products_create_product = (req, res, next) => {
           request: { //specifies which URL and HTTP verb to use to get details about the newly created product
               type: 'GET',
               description: "Get more details about this product",
-              url: " https://ot-node-rest-api.onrender.com/products/" + result._id
+              url: "https://ot-node-rest-api.onrender.com/products/" + result._id
           }
         }
       });
@@ -159,7 +159,7 @@ exports.products_get_product = (req, res, next) => {
           request: {
               type: 'GET',
               description: 'Get all products',
-              url: ' https://ot-node-rest-api.onrender.com/products'
+              url: 'https://ot-node-rest-api.onrender.com/products'
           }
         });
       } else {
@@ -199,7 +199,7 @@ exports.products_update_product = (req, res, next) => {
         message: 'Product updated',
         request: {
             type: 'GET',
-            url: ' https://ot-node-rest-api.onrender.com/products/' + id
+            url: 'https://ot-node-rest-api.onrender.com/products/' + id
         }
       });
     })
@@ -222,7 +222,7 @@ exports.products_delete = (req, res, next) => {
         request: {
             type: 'POST',
             description: 'Create a new product',
-            url: ' https://ot-node-rest-api.onrender.com/products',
+            url: 'https://ot-node-rest-api.onrender.com/products',
             body: { name: 'String', price: 'Number' }
         }
       });
