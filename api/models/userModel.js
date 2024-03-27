@@ -5,9 +5,9 @@ const userSchema = mongoose.Schema({
     email: { 
         type: String, 
         required: true, 
-        unique: true, //used for search optimization (within the db)
+        unique: true, 
         match: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
-        //match ensures that an acutual email address is being stored
+        
     },
     password: { type: String, required: true }
 });
