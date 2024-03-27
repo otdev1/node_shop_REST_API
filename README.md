@@ -63,7 +63,7 @@ Success response data:
             "price": productprice,
             "_id": productid,
             "request": {
-                "url": "https://ot-node-rest-api.herokuapp.com/products/productid",
+                "url": "https://ot-node-rest-api.onrender.com/products/productid",
                 "type": "GET",
                 "description": "Get more details about this product"
             }
@@ -90,7 +90,7 @@ Success response data:
         "price": productprice
     },
     "request": {
-        "url": "https://ot-node-rest-api.herokuapp.com/products",
+        "url": "https://ot-node-rest-api.onrender.com/products",
         "type": "GET",
         "description": "Get all products"
     }
@@ -121,7 +121,7 @@ Success response data:
         "name": productname,
         "_id": productid,
         "request": {
-            "url": "https://ot-node-rest-api.herokuapp.com/products/productid",
+            "url": "https://ot-node-rest-api.onrender.com/products/productid",
             "type": "GET",
             "description": "Get more details about this product"
         }
@@ -150,7 +150,7 @@ Success response data:
 {
     "message": "Product updated",
     "request": {
-        "url": "https://ot-node-rest-api.herokuapp.com/products/productid",
+        "url": "https://ot-node-rest-api.onrender.com/products/productid",
         "type": "GET"
     }
 }
@@ -172,7 +172,7 @@ Success response data:
 {
     "message": "Product deleted",
     "request": {
-        "url": "https://ot-node-rest-api.herokuapp.com/products",
+        "url": "https://ot-node-rest-api.onrender.com/products",
         "body": {
             "name": "String",
             "price": "Number"
@@ -207,7 +207,7 @@ Success response data:
             },
             "quantity": productquantity,
             "request": {
-                "url": "https://ot-node-rest-api.herokuapp.com/orders/orderid ",
+                "url": "https://ot-node-rest-api.onrender.com/orders/orderid ",
                 "type": "GET",
                 "description": "Get more details about this order"
             }
@@ -242,7 +242,7 @@ Success response data:
         "__v": 0
     },
     "request": {
-        "url": "https://ot-node-rest-api.herokuapp.com/orders",
+        "url": "https://ot-node-rest-api.onrender.com/orders",
         "type": "GET",
         "description": "Get all orders"
     }
