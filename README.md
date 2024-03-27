@@ -275,7 +275,7 @@ Success response data:
         "quantity": productquantity
     },
     "request": {
-        "url": "https://ot-node-rest-api.herokuapp.com/orders/orderid",
+        "url": "https://ot-node-rest-api.onrender.com/orders/orderid",
         "type": "GET",
         "description": "Get more details about this order"
     }
@@ -298,7 +298,7 @@ Success response data:
 {
     "message": "Order deleted",
     "request": {
-        "url": "https://ot-node-rest-api.herokuapp.com/orders",
+        "url": "https://ot-node-rest-api.onrender.com/orders",
         "type": "POST",
         "body": {
             "productId": "ID",
